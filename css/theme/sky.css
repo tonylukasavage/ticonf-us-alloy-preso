@@ -12,21 +12,21 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #add9e4;
-  background: -moz-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f7fbfc), color-stop(100%, #add9e4));
-  background: -webkit-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
-  background: -o-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
-  background: -ms-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
-  background: radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: #939899;
+  background: -moz-radial-gradient(center, circle cover, #f7fbfc 0%, #939899 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f7fbfc), color-stop(100%, #939899));
+  background: -webkit-radial-gradient(center, circle cover, #f7fbfc 0%, #939899 100%);
+  background: -o-radial-gradient(center, circle cover, #f7fbfc 0%, #939899 100%);
+  background: -ms-radial-gradient(center, circle cover, #f7fbfc 0%, #939899 100%);
+  background: radial-gradient(center, circle cover, #f7fbfc 0%, #939899 100%);
   background-color: #f7fbfc; }
 
 .reveal {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Museo Sans", sans-serif;
   font-size: 36px;
   font-weight: 200;
   letter-spacing: -0.02em;
-  color: #333333; }
+  color: #313634; }
 
 ::selection {
   color: white;
@@ -43,15 +43,18 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #333333;
-  font-family: "Quicksand", sans-serif;
+  color: #111;
+  font-family: "nevis", sans-serif;
   line-height: 0.9em;
-  letter-spacing: -0.08em;
+  letter-spacing: +0.01em;
   text-transform: uppercase;
   text-shadow: none; }
 
-.reveal h1 {
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
+.reveal h1, 
+.reveal h2 {
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); 
+  color: #941515;
+}
 
 /*********************************************
  * LINKS
