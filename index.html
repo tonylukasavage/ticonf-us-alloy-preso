@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Alloy - TiConf US - June 28th 2013</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -38,47 +38,256 @@
 			<div class="slides">
 				<section>
 					<h1>Alloy</h1>
-					<h3>Might, Magic, &amp; MVC</h3>
+					<h4>Deep Dive, Below the Surface, and Other Nautical Metaphors</h4>
 					<br><br>
 
 					<p>
-						<small>Created by <a href="http://tonylukasavage.com">Tony Lukasavage</a> / <a href="http://twitter.com/tonylukasavage">@tonylukasavage</a></small>
+						<small><a href="http://tonylukasavage.com">Tony Lukasavage</a> / <a href="http://twitter.com/tonylukasavage">@tonylukasavage</a></small>
 						<br>
 						<small>Alloy Lead Engineer @ <a href="http://www.appcelerator.com/">Appcelerator</a></small>
 						<br>
-						<small><a href="https://github.com/appcelerator/alloy">Alloy</a> on Github</small>
+						<small><a href="mailto:tlukasavage@appcelerator.com">tlukasavage@appcelerator.com</a></small>
 					</p>
+				</section>
+
+				<section>
+					<h2>me</h2>
 				</section>
 
 				<section>
 					<section>
 						<h2>Crash Course</h2>
 						<p>
-							Alloy is an MVC framework for Appcelerator's Titanium SDK
+							<img src="assets/alloy.png" style="height:256px; width:256px;"></img>
 						</p>
-						<ul>
-							<li>Code reduction &amp; reuse</li>
-							<li>Faster development</li>
-							<li>Faster runtime execution</li>
-							<li>High quality results</li>
-						</ul>
+						<p>
+							Alloy is an MVC framework for Appcelerator's Titanium SDK built with the following primary goals in mind...
+						</p>
+						
 					</section>
 
 					<section>
+						<p><img src="assets/separation_of_concerns.png" style="border:none"></img></p>
+						<p>
+							Models | Views | Controllers | Styles
+						</p>
+						<aside class="notes">
+							<ul>
+								<li>Promotes scalability and maintainability</li>
+								<li>Team dynamic</li>
+								<li>Code reuse and reduction</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section>
+						<h2>Faster Development</h2>
+						<img src="assets/15min.png" style="height:550px;"></img>
+						<aside class="notes">
+							<ul>
+								<li>View separation allows for faster prototyping</li>
+								<li>IDE and compile time validation. Don't have to wait for runtime.</li>
+								<li>Designers contributions. No knowledge of Titanium or even JS is necessary. Themes and styling totally external.</li>
+								<li>Widgets, adapters, builtins</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section>
+						<h2>Best Practices</h2>
+						<p><img src="assets/js2.jpg"></img></p>
+						<aside class="notes">
+							<ul>
+								<li>standarize coding practices. Creates a reference point when asking for help, or giving it.</li>
+								<li>Embedding the know-how of the best Titanium developers in the world</li>
+								<li>CommonJS</li>
+								<li>performance optimizations</li>
+								<li>memory optimizations</li>
+								<li>parity issues</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section data-background="assets/apps.png">
+						<h2 style="color: #fff;background-color:#a00; padding:20px; border: 4px solid #000;">High Quality Apps</h2>
+
+						<aside class="notes">
+							<ul>
+								<li>Distinguishable from other cross-platform frameworks in that we are indistinguishable from native built apps.</li>
+								<li>Indie to Enterprise</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section data-background="#000">
+						<h2 style="color:#fff">H to the Izzo</h2>
+					</section>
+
+				
+				</section>
+
+				<section>
+					<section data-background-transition="slide" data-background="assets/title.png" transition="linear">
+					</section>
+
+					<section data-background-transition="slide" data-background="#74a7ef" data-transition="linear">
+						<pre style="height:700px;"><code data-trim contenteditable>
+var tabGroup = Titanium.UI.createTabGroup();
+var win1 = Titanium.UI.createWindow({  
+    title:'tab 1',
+    backgroundColor:'#fff'
+});
+var tab1 = Titanium.UI.createTab({  
+    title:'tab 1',
+    window:win1
+});
+var label1 = Titanium.UI.createLabel({
+	text:'tab 1'
+});
+win1.add(label1);
+
+var win2 = Titanium.UI.createWindow({  
+    title:'tab 2',
+    backgroundColor:'#fff'
+});
+var tab2 = Titanium.UI.createTab({  
+    title:'tab 2',
+    window:win2
+});
+var label2 = Titanium.UI.createLabel({
+	text:'tab 2'
+});
+win2.add(label2);
+
+tabGroup.addTab(tab1);  
+tabGroup.addTab(tab2);  
+tabGroup.open();
+							</code></pre>
+						</section>
+
+					<section data-background-transition="slide" data-background="#6ea2ea" data-transition="linear">
 						<h2>XML UI</h2>
+						<pre><code data-trim contenteditable>
+&lt;Alloy&gt;
+  &lt;TabGroup&gt;
+    &lt;Tab title=&quot;tab1&quot;&gt;
+      &lt;Window title=&quot;tab1&quot; backgroundColor=&quot;#fff&quot;&gt;
+        &lt;Label&gt;tab 1&lt;/Label&gt;
+      &lt;/Window&gt;
+    &lt;/Tab&gt;
+    &lt;Tab title=&quot;tab2&quot;&gt;
+      &lt;Window title=&quot;tab2&quot; backgroundColor=&quot;#fff&quot;&gt;
+        &lt;Label&gt;tab 2&lt;/Label&gt;
+      &lt;/Window&gt;
+    &lt;/Tab&gt;
+  &lt;/TabGroup&gt;
+&lt;/Alloy&gt;
+							</code></pre>
 					</section>
 
-					<section>
-						<h2>Style Sheets</h2>
+					<section data-background-transition="slide" data-background="#6497df" data-transition="linear">
+						<h2>TSS</h2>
+						<pre><code>
+'Window': {
+  backgroundColor: '#fff',
+  navBarHidden: true
+}
+
+'Label': {
+  color: '#222',
+  font: {
+    fontSize: 18,
+    fontWeight: 'normal'
+  }
+}
+
+'.shadow': {
+  shadowColor: Alloy.CFG.shadowColor,
+  shadowOffset: {x:1,y:2}
+}
+
+'#index[platform=android]': {
+  exitOnClose: true
+}
+						</pre></code>
+						<aside class="notes">
+							<p>TSS: JSON-like syntax. API, classes, id. Platform/theme-specific styles. Device queries (platform/formfactor). Alloy namespace. 
+						</aside>
 					</section>
 
-					<section>
+					<section data-background-transition="slide" data-background="#5487cf" transition="linear">
+						<h2>Controllers</h2>
+						<pre><code>
+var history = ['magic show', 'wear $6000 suit'];
+function forgetMeNow() {
+  history.clear();
+}
+
+function assessAction(e) {
+  if(OS_ANDROID) {
+    alert("It's all good!");
+  } else {
+    Ti.API.error("I've made a huge mistake");
+    forgetMeNow();
+  }
+}
+
+exports.isNude = function() {
+  return false;
+}
+
+exports.isThereMoney = function(location) {
+   return location === 'banana stand';
+}
+
+$.someWindow.open();
+						</pre></code>
+					</section>
+
+					<section data-background-transition="slide" data-background="#4477bf" transition="linear">
+						<h2>Models</h2>
+						<pre><code>exports.definition = {
+  config: {
+    columns: {
+      item: "text",
+      done: "integer",
+      date_completed: "text"
+    },
+    adapter: {
+      type: "sql",
+      collection_name: "todo"
+    }
+  },
+  extendModel : function(Model) {
+    _.extend(Model.prototype, {
+        validate : function(attrs) { /* ... */ }
+    });
+    return Model;
+  },
+  extendCollection : function(Collection) {
+    _.extend(Collection.prototype, {
+      comparator: function(todo) { return todo.get('done'); }
+    });
+    return Collection;
+  }
+}</code></pre>
+					</section>
+
+					<section data-background-transition="slide" data-background="#3467af" transition="linear">
 						<h2>Widgets</h2>
+						<table><tr>
+							<td><img src="assets/slide1.png"></img></td>
+							<td><img src="assets/slide2.png"></img></td>
+							<td><img src="assets/slide3.png"></img></td>
+						</tr></table>
+						<p>
+							<small>
+								<a style="color:#111;" href="http://www.danielsefton.com/2012/10/ios-slider-menu-widget-for-titanium-alloy/">http://www.danielsefton.com/2012/10/ios-slider-menu-widget-for-titanium-alloy</a>
+							</small>
+						</p>
 					</section>
 
-					<section>
-						<h2>Widgets</h2>
-					</section>
+					
 				</section>
 
 				<section>
@@ -127,6 +336,11 @@
 				</section>
 
 				<section>
+					<h2>loose coupling</h2>
+					<h3>through controller eventing</h3>
+				</section>
+
+				<section>
 					<h2>data binding</h2>
 					<ul>
 						<li>dataCollection</li>
@@ -142,6 +356,9 @@
 				<section>
 					<h2>community</h2>
 					<p>fokkezb, davidbankier, aaronksaunders, nappdev</p>
+					<p>#tialloy</p>
+					<p>google group</p>
+					<p>Q&amp;A with "alloy" tag</p>
 				</section>
 
 				<section>
@@ -169,6 +386,8 @@
 						<h2>Native Formats</h2>
 					</section>
 				</section>
+
+
 
 
 
