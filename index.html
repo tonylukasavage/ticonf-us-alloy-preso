@@ -42,19 +42,26 @@
 					<br><br>
 
 					<p>
-						<small><a href="http://tonylukasavage.com">Tony Lukasavage</a> / <a href="http://twitter.com/tonylukasavage">@tonylukasavage</a></small>
+						TiConf US
 						<br>
-						<small>Alloy Lead Engineer @ <a href="http://www.appcelerator.com/">Appcelerator</a></small>
+						June 28-29 2013
 						<br>
-						<small><a href="mailto:tlukasavage@appcelerator.com">tlukasavage@appcelerator.com</a></small>
+						Tremont Hotel in Baltimore
 					</p>
 				</section>
 
 				<section>
 					<img src="assets/me.jpg"></img>
 					<h6>Tony Lukasavage</h6>
-					<p>Dad | Husband | <span style="color:#a00;">Hacker</span></p>
-					<p><small>that's about it these days</small></p>
+					<!-- <p>Dad | Husband | <span style="color:#a00;">Hacker</span></p> -->
+					<p>
+						<small>Alloy Lead Engineer @ <a href="http://www.appcelerator.com/">Appcelerator</a></small>
+						<br>
+						<small><a href="http://twitter.com/tonylukasavage">@tonylukasavage</a></small>
+						<br>
+						<small><a href="mailto:tlukasavage@appcelerator.com">tlukasavage@appcelerator.com</a></small>
+					</p>
+
 				</section>
 
 				<section>
@@ -82,7 +89,7 @@
 						</p>		
 					</section>
 
-					<section data-background="#3F3F3F">
+					<section>
 						<pre style="height:700px;"><code data-trim contenteditable>
 var tabGroup = Titanium.UI.createTabGroup();
 var win1 = Titanium.UI.createWindow({  
@@ -116,9 +123,9 @@ tabGroup.open();
 						</code></pre>
 					</section>
 
-					<section data-background="#3f3f3f">
-						<h2 style="color:#fff">Declarative UI</h2>
-						<pre><code data-trim contenteditable>
+					<section>
+						<h2>Declarative UI</h2>
+						<pre><code data-trim contenteditable class="language-xml">
 &lt;Alloy&gt;
   &lt;TabGroup&gt;
     &lt;Tab title=&quot;tab1&quot;&gt;
@@ -136,16 +143,18 @@ tabGroup.open();
 							</code></pre>
 					</section>
 
-					<section data-background="#3f3f3f">
-						<h2 style="color:#fff">TSS</h2>
-						<pre><code data-trim contenteditable>
+					<section>
+						<h2>TSS</h2>
+						<pre><code data-trim contenteditable class="language-javascript">
 'Window': {
   backgroundColor: '#fff',
   navBarHidden: true
 }
 
 'Label': {
+  text: L('theString'),
   color: '#222',
+  height: Ti.UI.SIZE,
   font: {
     fontSize: 18,
     fontWeight: 'normal'
@@ -166,10 +175,9 @@ tabGroup.open();
 						</aside>
 					</section>
 
-					<section data-background="#3f3f3f">
-						<h2 style="color:#fff">Controllers</h2>
-						<pre><code>
-var memory = ['magic show', 'wear $6000 suit'];
+					<section>
+						<h2>Controllers</h2>
+						<pre><code>var memory = ['magic show', 'wear $6000 suit'];
 function forgetMeNow() {
   memory.push('took forget-me-now');
   setTimeout(function() { memory.pop() }, 1000 * 60 * 60 * 12); 
@@ -191,8 +199,8 @@ try {
 }</pre></code>
 					</section>
 
-					<section data-background="#3f3f3f">
-						<h2 style="color:#fff">Models</h2>
+					<section>
+						<h2>Models</h2>
 						<pre><code>exports.definition = {
   config: {
     columns: {
@@ -241,6 +249,19 @@ try {
 
 					<section data-background-transition="slide" data-background="#6497df" transition="linear">
 						<h2>Sync Adapters</h2>
+						<br>
+						<ul>
+							<li><span style="color:#a00;">Alloy</span> + Backbone.js</li>
+							<li>Data persistence abstraction</li>
+							<li>Adapters:
+								<ul>
+									<li>SQLite</li>
+									<li><span style="color:#a00;">REST</span></li>
+									<li>ACS</li>
+									<li>CouchDB</li>
+								</ul>
+							</ul>
+						</ul>
 
 						<aside class="notes">
 							<p>Backbone + Alloy. Sql, REST, ACS, CouchDB. Persistence with no need to understand the underlying APIs in most cases.</p>
@@ -249,10 +270,16 @@ try {
 
 					<section data-background-transition="slide" data-background="#5487cf" transition="linear">
 						<h2>Builtins</h2>
-
-						<aside class="notes">
-							<p>Backbone, underscore, moment. Titanium animation. </p>
-						</aside>
+						<br>
+						<ul>
+							<li>Backbone.js</li>
+							<li>Underscore.js</li>
+							<li>Moment.js</li>
+							<li>Titanium-specific libraries</li>
+						</ul>
+						<pre><code>
+var moment = require('alloy/moment');
+						</code></pre>
 					</section>					
 
 					
@@ -298,7 +325,7 @@ try {
 				</section>
 
 				<section data-background="assets/apps.png">
-					<h2 style="color: #fff;background-color:#a00; padding:20px; border: 4px solid #000;">High Quality Apps</h2>
+					<h2 class="fragment roll-in" style="color: #fff;background-color:#a00; padding:20px; border: 4px solid #000;">High Quality Apps</h2>
 
 					<aside class="notes">
 						<ul>
@@ -315,14 +342,14 @@ try {
 				<section>
 					<h2><span style="color:#000;">Installing</span> Alloy</h2>
 					<br>
-					<pre><code class="language-bash"># straight from github
-[sudo] npm install -g git://github.com/appcelerator/alloy.git
-
-# latest stable
+					<pre><code class="language-bash"># latest stable
 [sudo] npm install -g alloy
 
 # by version
-[sudo] npm install -g alloy@1.1.3</code></pre>
+[sudo] npm install -g alloy@1.1.3
+
+# straight from github
+[sudo] npm install -g git://github.com/appcelerator/alloy.git</code></pre>
 				</section>
 
 				<section>
@@ -359,6 +386,18 @@ try {
 						<br><br>
 						<p><small><sup>*</sup>available in Alloy 1.2.0</small><p>
 					</section>
+				</section>
+
+				<section>
+					<h2>Native Modules</h2>
+					<h3>in markup<sup>*</sup></h3>
+					<br>
+					<pre><code class="language-xml" style="font-size:24px;">
+&lt;Module id="paint" module="ti.paint" 
+        method="createPaintView" platform="ios,android"/&gt;
+					</code></pre>
+					<br><br>
+					<p><small><sup>*</sup>available in Alloy 1.2.0</small><p>
 				</section>
 
 				<section>
@@ -405,11 +444,18 @@ try {
 
 				<section>
 					<h2>View Model Binding</h2>
+					<br>
 					<ul>
 						<li>dataCollection</li>
 						<li>dataTransform</li>
 						<li>dataFilter</li>
 					</ul>
+					<pre><code>
+&lt;TableView id="todoTable" dataCollection="todo" 
+            dataFilter="whereFunction" dataTransform="transformFunction"&gt;
+   &lt;Require src="row"/&gt;
+&lt;/TableView&gt;
+					</code></pre>
 				</section>
 
 				<section>
