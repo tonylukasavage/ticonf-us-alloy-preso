@@ -51,7 +51,10 @@
 				</section>
 
 				<section>
-					<h2>me</h2>
+					<img src="assets/me.jpg"></img>
+					<h6>Tony Lukasavage</h6>
+					<p>Dad | Husband | <span style="color:#a00;">Hacker</span></p>
+					<p><small>that's about it these days</small></p>
 				</section>
 
 				<section>
@@ -61,7 +64,7 @@
 							<img src="assets/alloy.png" style="height:256px; width:256px;"></img>
 						</p>
 						<p>
-							Alloy is an MVC framework for Appcelerator's Titanium SDK built with the following primary goals in mind...
+							Alloy is an MVC framework for Appcelerator's Titanium SDK built with Node.js. Through a compilation process it aims to produce highly optimized, cross-platform Javascript code.
 						</p>
 					</section>
 
@@ -319,7 +322,7 @@ try {
 [sudo] npm install -g alloy
 
 # by version
-sudo] npm install -g alloy@1.1.3</code></pre>
+[sudo] npm install -g alloy@1.1.3</code></pre>
 				</section>
 
 				<section>
@@ -401,7 +404,7 @@ sudo] npm install -g alloy@1.1.3</code></pre>
 				</section>
 
 				<section>
-					<h2>data binding</h2>
+					<h2>View Model Binding</h2>
 					<ul>
 						<li>dataCollection</li>
 						<li>dataTransform</li>
@@ -411,15 +414,15 @@ sudo] npm install -g alloy@1.1.3</code></pre>
 
 				<section>
 					<h2>Source Maps</h2>
+					<br>
 					<ul>
 						<li>Maps generated code to source, and vice versa</li>
 						<li>Enables debugging, exceptions, and code processor</li>
 						<li>config.json toggling</li>
-					</ul>
-					<section>
-						<h2>config.json</h2>
-						<p>speed up compilation with "sourcemap" property</p>
-					</section>	
+					</ul>	
+					<pre><code>{
+  "sourcemap": false
+}</code></pre>
 				</section>
 
 				<section data-background="assets/alloylove.png">
@@ -454,9 +457,28 @@ sudo] npm install -g alloy@1.1.3</code></pre>
 						<h2>Dynamic Themes</h2>
 						<table><tr>
 							<td><img src="assets/theme1.png"></img></td>
-							<td style="vertical-align:middle"><img src="assets/right.png" style="border:0; width: 300px;"></img></td>
+							<td style="vertical-align:middle"><span style="font-size:300px;">&rarr;</span></td>
 							<td><img src="assets/theme2.png"></img></td>
 						</tr></table>
+					</section>
+
+					<section>
+						<h2>Lighter, More Powerful Modeling</h2>
+						<ul>
+							<li>Peel back the Alloy layer</li>
+							<li>Develop abstract model interface</li>
+							<li>Leverage Alloy's and framework of choice's features</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Native Formats</h2>
+						<br>
+						<ul>
+							<li>iOS Nib</li>
+							<li>Android XML</li>
+							<li>Native formatting optimizations</li>
+						</ul>
 					</section>
 
 					<section>
@@ -474,25 +496,6 @@ tpm install someCoolAssWidget
 # Install a sync adapter.
 tmp install syncToMyToaster
 						</code></pre>
-					</section>
-
-					<section>
-						<h2>Lighter, More Powerful Modeling</h2>
-						<ul>
-							<li>Peel back the Alloy layer</li>
-							<li>Develop abstract model interface</li>
-							<li>Leverage Alloy's and framework of choice's features</li>
-						</ul>
-					</section>
-
-					<section>
-						<h2>Native Formats</h2>
-						<br>
-						<ul>
-							<li>iOS .nib</li>
-							<li>Android XML</li>
-							<li>Native formatting optimizations</li>
-						</ul>
 					</section>
 				</section>
 
