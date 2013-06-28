@@ -1,0 +1,7 @@
+Alloy
+ Window.container
+   Label#label(onClick="doClick") 
+     if alloyConfig.deploytype == "development"
+       | Hello Developer
+     else
+       | Hello World

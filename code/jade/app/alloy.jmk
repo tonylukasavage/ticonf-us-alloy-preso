@@ -1,0 +1,30 @@
+task("pre:compile", function(event,logger) {
+  var wrench = require("wrench"),
+      fs = require("fs"),
+      jade = require("jade"),
+      view_root = event.dir.views,
+      path = require("path");
+ 
+  event.alloyConfig.xml = [];
+      
+  wrench.readdirSyncRecursive(view_root).forEach(function(view) {
+    if (view.match(/.jade$/)) {
+      event.alloyConfig.xml.push(view.replace(/\.jade$/, ".xml"));
+      fs.writeFileSync(
+        path.join(view_root,view.replace(/\.jade$/, ".xml")),
+        jade.compile(fs.readFileSync(path.join(view_root,view)).toString())(event));
+    } 
+  });
+});
+ 
+task("post:compile",function(event,logger){
+  var fs = require("fs"),
+      view_root = event.dir.views,
+      path = require("path");
+ 
+  event.alloyConfig.xml.forEach(function(view){
+    if (!view.match(/index.xml/g)) {
+      fs.unlinkSync(path.join(view_root, view));
+    }
+  });
+});

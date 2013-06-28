@@ -1,0 +1,15 @@
+'#receiver': {
+  color: '#fff',
+  backgroundColor: '#00a',
+  bottom: '50dp',
+  height: '100dp',
+  width: '300dp',
+  borderRadius: 8,
+  borderWidth: 1,
+  borderColor: '#111',
+  font: {
+    fontSize: '24dp',
+    fontWeight: 'normal'
+  },
+  textAlign: 'center'
+}

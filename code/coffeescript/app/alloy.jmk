@@ -1,0 +1,25 @@
+task("pre:compile", function(event,logger) {
+  var wrench = require("wrench"),
+    fs = require("fs"),
+    path = require("path"),
+    coffee = require("coffee-script");
+ 
+  event.alloyConfig.coffee = [];
+ 
+  wrench.readdirSyncRecursive(event.dir.home).forEach(function(target){
+    if (target.match(/\.coffee$/)) {
+      event.alloyConfig.coffee.push(target.replace(/\.coffee$/, ".js"));
+      fs.writeFileSync(
+        path.join(event.dir.home,target.replace(/\.coffee$/, ".js")),
+        coffee.compile(fs.readFileSync(path.join(event.dir.home + "/" + target)).toString(), { bare: true }));
+    }
+  });
+});
+ 
+task("post:compile",function(event,logger){
+  var fs = require("fs");
+ 
+  event.alloyConfig.coffee.forEach(function(target){
+    fs.unlinkSync(event.dir.home + "/" + target);
+  });
+});

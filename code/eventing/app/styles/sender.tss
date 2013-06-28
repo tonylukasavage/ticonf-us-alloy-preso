@@ -1,0 +1,15 @@
+'#sender': {
+  color: '#fff',
+  backgroundColor: '#a00',
+  top: '50dp',
+  height: '100dp',
+  width: '200dp',
+  borderRadius: 8,
+  borderWidth: 1,
+  borderColor: '#111',
+  font: {
+    fontSize: '32dp',
+    fontWeight: 'bold'
+  },
+  textAlign: 'center'
+}

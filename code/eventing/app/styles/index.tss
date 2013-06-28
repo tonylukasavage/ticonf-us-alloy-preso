@@ -1,0 +1,5 @@
+'#index': {
+  backgroundColor: '#fff',
+  navBarHidden: true,
+  exitOnClose: true
+}

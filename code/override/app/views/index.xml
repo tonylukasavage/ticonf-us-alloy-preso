@@ -1,0 +1,7 @@
+<Alloy>
+	<Window>
+		<TableView dataCollection="tester">
+      <TableViewRow title="{title}"/>
+    </TableView>
+	</Window>
+</Alloy>

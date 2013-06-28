@@ -1,0 +1,6 @@
+<Alloy>
+	<Window>
+		<Require src="sender" onSendEvent="notifyReceiver"/>
+    <Require id="receiver" src="receiver"/>
+	</Window>
+</Alloy>
