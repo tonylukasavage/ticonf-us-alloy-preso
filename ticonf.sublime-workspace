@@ -523,15 +523,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 18503,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "code/databinding/app/config.json",
-			"settings":
-			{
-				"buffer_size": 183,
+				"buffer_size": 18542,
 				"line_ending": "Unix"
 			}
 		},
@@ -540,14 +532,6 @@
 			"settings":
 			{
 				"buffer_size": 4277,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "css/reveal.min.css",
-			"settings":
-			{
-				"buffer_size": 36706,
 				"line_ending": "Unix"
 			}
 		}
@@ -584,6 +568,9 @@
 	},
 	"file_history":
 	[
+		"/Users/tlukasavage/Development/ticonf-us-alloy-preso/lib/css/ticonf.css",
+		"/Users/tlukasavage/Development/ticonf-us-alloy-preso/code/databinding/app/config.json",
+		"/Users/tlukasavage/Development/ticonf-us-alloy-preso/css/reveal.min.css",
 		"/Users/tlukasavage/Development/ticonf-us-alloy-preso/code/databinding/tiapp.xml",
 		"/Users/tlukasavage/Development/ticonf-us-alloy-preso/code/databinding/.gitignore",
 		"/Users/tlukasavage/Development/ticonf-us-alloy-preso/lib/css/zenburn.css",
@@ -708,10 +695,7 @@
 		"/Users/tlukasavage/Development/alloy/test/apps/testing/ALOY-696/config.json",
 		"/Users/tlukasavage/Development/alloy/regen.js",
 		"/Users/tlukasavage/Development/alloy/test/apps/advanced/proxy_property_requires/_generated/android/alloy/widgets/com.foo.widget/controllers/row.js",
-		"/Users/tlukasavage/Development/alloy/test/apps/advanced/proxy_property_requires/_generated/android/alloy/widgets/com.foo.widget/controllers/row_bind.js",
-		"/Users/tlukasavage/Development/alloy/test/apps/advanced/proxy_property_requires/_generated/android/alloy/widgets/com.foo.widget/controllers/section.js",
-		"/Users/tlukasavage/Development/alloy/test/apps/advanced/proxy_property_requires/_generated/blackberry/alloy/widgets/com.foo.widget/controllers/row.js",
-		"/Users/tlukasavage/Development/alloy/test/apps/advanced/proxy_property_requires/_generated/blackberry/alloy/widgets/com.foo.widget/controllers/row_bind.js"
+		"/Users/tlukasavage/Development/alloy/test/apps/advanced/proxy_property_requires/_generated/android/alloy/widgets/com.foo.widget/controllers/row_bind.js"
 	],
 	"find":
 	{
@@ -729,6 +713,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"attr",
+			"xml",
+			"func",
 			"code",
 			"background",
 			"333",
@@ -853,10 +840,7 @@
 			"STYLE_VALUES",
 			"regex",
 			"componentStyle",
-			"sortStyles",
-			"styleOrderCounter",
-			"styleOrderBase",
-			"globalStyle[^s]"
+			"sortStyles"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -914,15 +898,15 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 18503,
+						"buffer_size": 18542,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8118,
-								8118
+								728,
+								728
 							]
 						],
 						"settings":
@@ -931,39 +915,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6331.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "code/databinding/app/config.json",
-					"settings":
-					{
-						"buffer_size": 183,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1,
-								1
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "css/theme/sky.css",
 					"settings":
 					{
@@ -985,32 +943,6 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 102.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "css/reveal.min.css",
-					"settings":
-					{
-						"buffer_size": 36706,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5050,
-								5050
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 55456.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
